@@ -41,7 +41,7 @@ This is how you install the module into an existing Anax installation.
 Install using composer.
 
 ```bash
-composer require lindhjonathan/jodn14-weather
+composer require jodn14/weather
 ```
 
 ```bash
