@@ -1,0 +1,4 @@
+# Ignore anax installation vendor
+/vendor
+/.bin
+/build
