@@ -1,6 +1,6 @@
 <?php
 
-namespace Jond14\Models;
+namespace Jodn14\Models;
 
 /**
  * Model for validating an ip address
