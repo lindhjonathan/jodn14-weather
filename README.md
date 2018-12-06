@@ -20,10 +20,10 @@ Install and setup Anax
 
 You need a Anax installation, before you can use this module. You can create a sample Anax installation, using the scaffolding utility [`anax-cli`](https://github.com/canax/anax-cli).
 
-Scaffold a sample Anax installation `anax-site-develop` into the directory `weather`.
+Scaffold a sample Anax installation `anax-ramverk1-me` into the directory `weather`.
 
 ```bash
-anax create weather anax-site-develop
+anax create weather ramverk1-me-v2
 cd weather
 ```
 
