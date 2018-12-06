@@ -3,7 +3,7 @@ Jodn14 Anax weather module
 
 Code and build Status
 ----------------------------------
-Links to Travis/Scrutinizer
+[![Build Status](https://travis-ci.org/lindhjonathan/jodn14-weather.svg?branch=master)](https://travis-ci.org/lindhjonathan/jodn14-weather)
 
 
 Table of content
