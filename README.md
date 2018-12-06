@@ -5,10 +5,6 @@ Code and build Status
 ----------------------------------
 Links to Travis/Scrutinizer
 
-Versions
------------------------------------
-Links to stable builds
-
 
 Table of content
 ------------------------------------
@@ -44,11 +40,6 @@ Install using composer.
 composer require jodn14/weather
 ```
 
-```bash
-rsync -av vendor/jodn14/weather/config ./
-```
-
-
 Install using scaffold postprocessing file
 ------------------------------------
 
@@ -63,7 +54,7 @@ The postprocessing script should be run after the `composer require` is done.
 Dependency
 ------------------
 
-This is a Anax modulen and primarly intended to be used together with the Anax framework.
+This is an Anax module and it's primarily intended to be used together with the Anax framework.
 
 License
 ------------------
