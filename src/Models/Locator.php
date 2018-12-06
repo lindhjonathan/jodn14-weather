@@ -16,7 +16,7 @@ class Locator
     /**
      * calls ipstack with ip parameter
      *
-     * @param string ip-address
+     * @param string ipAddress
      * @return array
      */
     public function getLocation($ipAddress) : array

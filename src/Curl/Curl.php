@@ -38,9 +38,10 @@ class Curl
     /**
      * Call weather service to get upcoming 7 days
      *
-     * @param string $location     "latitude,longitude".
+     * @param string $lat
+     * @param string $long
      *
-     * @return self
+     * @return array
      */
     public function getForecast($lat, $long)
     {
@@ -51,12 +52,6 @@ class Curl
 
         // Call multi-curl function with populated url array
         $res = $this->multi($data);
-
-        // if (in_array(400, $res[0])) {
-        //     if ($res[0]["code"] === 400) {
-        //         return $res[0];
-        //     }
-        // }
 
         $filtered = [
             "currently" => $res[0]["currently"]["summary"] ?? null,
@@ -72,13 +67,13 @@ class Curl
     }
 
 
-
     /**
      * Call weather service to get past 30 days.
      *
-     * @param string $location      "latitude,longitude".
+     * @param string $lat
+     * @param string $long
      *
-     * @return self
+     * @return array
      */
     public function getPast($lat, $long)
     {
@@ -95,12 +90,6 @@ class Curl
         // Call multi-curl function with populated url array
         $res = $this->multi($data);
 
-        // if (in_array(400, $res[0])) {
-        //     if ($res[0]["code"] === 400) {
-        //         return $res[0];
-        //     }
-        // }
-
         $filtered = [];
         for ($i = 0; $i < count($res); $i++) {
             $filtered[$i]["summary"] = $res[$i]["currently"]["summary"];
@@ -113,13 +102,12 @@ class Curl
     }
 
 
-
     /**
-     * Call weather service to get past 30 days.
+     * Call weather service with a multi handle
      *
-     * @param string $location      "latitude,longitude".
+     * @param array $data
      *
-     * @return self
+     * @return array
      */
     public function multi($data)
     {
@@ -149,9 +137,6 @@ class Curl
             $resultSet[$id] = json_decode($resultSet[$id], true);
             curl_multi_remove_handle($mhandle, $d);
         }
-        // $filtered = [
-        //     "Summary" => $resultSet[$id]["daily"]["Summary"],
-        // ];
 
         curl_multi_close($mhandle);
 
@@ -165,7 +150,7 @@ class Curl
      *
      * @param string $search     "city name".
      *
-     * @return self
+     * @return array
      */
     public function getCoordinates($search)
     {
