@@ -15,7 +15,7 @@ rsync -av vendor/jodn14/weather/src ./
 rsync -av vendor/jodn14/weather/view ./
 
 # Copy stylesheet
-rsync -av vendor/jodn14/weather/htdocs/css ./
+rsync -av vendor/jodn14/weather/htdocs ./
 
 # Copy test files
 rsync -av vendor/jodn14/weather/test ./
