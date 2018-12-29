@@ -62,7 +62,7 @@ This is an Anax module and it's primarily intended to be used together with the 
 
 License
 ------------------
-[![License](https://poser.pugx.org/chai17/weather/license)](https://packagist.org/packages/lindhjonathan/jodn14-weather)
+[![License](https://poser.pugx.org/jodn14/weather/license)](https://packagist.org/packages/jodn14/weather)
 This software carries a MIT license. See [LICENSE.txt](LICENSE.txt) for details.
 
 ```
